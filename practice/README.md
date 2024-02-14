@@ -45,17 +45,25 @@
 
 2. Подготовьте [backend](https://www.terraform.io/docs/language/settings/backends/index.html) для Terraform:  
    а. Рекомендуемый вариант: S3 bucket в созданном ЯО аккаунте(создание бакета через TF)
+   б. Альтернативный вариант:  [Terraform Cloud](https://app.terraform.io/)  
 
 [bucket.tf](tf%2Fbucket.tf)
 
 ![object_storage.png](img%2Fobject_storage.png)
-
-   б. Альтернативный вариант:  [Terraform Cloud](https://app.terraform.io/)  
+  
 
 3. Создайте VPC с подсетями в разных зонах доступности.
 
+[net.tf](tf%2Fnet.tf)
+
+![subnets.png](img%2Fsubnets.png)
 
 4. Убедитесь, что теперь вы можете выполнить команды `terraform destroy` и `terraform apply` без дополнительных ручных действий.
+
+![apply.png](img%2Fapply.png)
+
+![destroy.png](img%2Fdestroy.png)
+
 5. В случае использования [Terraform Cloud](https://app.terraform.io/) в качестве [backend](https://www.terraform.io/docs/language/settings/backends/index.html) убедитесь, что применение изменений успешно проходит, используя web-интерфейс Terraform cloud.
 
 Ожидаемые результаты:
