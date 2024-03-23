@@ -128,7 +128,12 @@
 Ожидаемый результат:
 
 1. Git репозиторий с тестовым приложением и Dockerfile.
+
+[Git репозиторий](https://github.com/seriywalk/dp-app.git)
+
 2. Регистри с собранным docker image. В качестве регистри может быть DockerHub или [Yandex Container Registry](https://cloud.yandex.ru/services/container-registry), созданный также с помощью terraform.
+
+[Образ docker](https://hub.docker.com/r/upperator/ser_nginx)
 
 ---
 ### Подготовка cистемы мониторинга и деплой приложения
