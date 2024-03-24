@@ -151,6 +151,21 @@
 
 Способ выполнения:
 1. Воспользовать пакетом [kube-prometheus](https://github.com/prometheus-operator/kube-prometheus), который уже включает в себя [Kubernetes оператор](https://operatorhub.io/) для [grafana](https://grafana.com/), [prometheus](https://prometheus.io/), [alertmanager](https://github.com/prometheus/alertmanager) и [node_exporter](https://github.com/prometheus/node_exporter). При желании можете собрать все эти приложения отдельно.
+
+`Отличная инструкция по установке и настройке` [kube-prometheus](https://dev.to/thenjdevopsguy/how-to-configure-kube-prometheus-4njh)
+
+![kube-prometeus.png](img%2Fkube-prometeus.png)
+
+![monitoring-pods.png](img%2Fmonitoring-pods.png)
+
+`Чтобы получить доступ к grafana пробрасываем порт для helm`
+
+![port-forward-grafana.png](img%2Fport-forward-grafana.png)
+
+`Заходим с логин / пароль admin/prom-operator`
+
+![grafana.png](img%2Fgrafana.png)
+
 2. Для организации конфигурации использовать [qbec](https://qbec.io/), основанный на [jsonnet](https://jsonnet.org/). Обратите внимание на имеющиеся функции для интеграции helm конфигов и [helm charts](https://helm.sh/)
 3. Если на первом этапе вы не воспользовались [Terraform Cloud](https://app.terraform.io/), то задеплойте и настройте в кластере [atlantis](https://www.runatlantis.io/) для отслеживания изменений инфраструктуры. Альтернативный вариант 3 задания: вместо Terraform Cloud или atlantis настройте на автоматический запуск и применение конфигурации terraform из вашего git-репозитория в выбранной вами CI-CD системе при любом комите в main ветку. Предоставьте скриншоты работы пайплайна из CI/CD системы.
 
