@@ -166,8 +166,8 @@
 
 ![error_qbec.png](img%2Ferror_qbec.png)
 
-`Рабочий метод установки тут: https://qbec.io/getting-started/ (спасибо Кириллу Попову)
-Правда предварительно нужно поставить пакетный менеджер brew https://linuxconfig.org/how-to-install-brew-on-linux`
+`Рабочий метод установки [тут](https://qbec.io/getting-started/)  (спасибо Кириллу Попову)
+Правда предварительно нужно поставить пакетный менеджер [brew](https://linuxconfig.org/how-to-install-brew-on-linux) `
 
 3. Если на первом этапе вы не воспользовались [Terraform Cloud](https://app.terraform.io/), то задеплойте и настройте в кластере [atlantis](https://www.runatlantis.io/) для отслеживания изменений инфраструктуры. Альтернативный вариант 3 задания: вместо Terraform Cloud или atlantis настройте на автоматический запуск и применение конфигурации terraform из вашего git-репозитория в выбранной вами CI-CD системе при любом комите в main ветку. Предоставьте скриншоты работы пайплайна из CI/CD системы.
 
