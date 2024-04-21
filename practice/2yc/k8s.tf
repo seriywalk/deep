@@ -1,4 +1,4 @@
-resource "yandex_kubernetes_cluster" "my-kuber" {
+resource "yandex_kubernetes_cluster" "my_kuber" {
   name        = var.cluster_name
   description = "description"
 
@@ -60,7 +60,7 @@ resource "yandex_kubernetes_cluster" "my-kuber" {
 }
 
 resource "yandex_kubernetes_node_group" "kuber_node_group" {
-  cluster_id  = yandex_kubernetes_cluster.my-kuber.id
+  cluster_id  = yandex_kubernetes_cluster.my_kuber.id
   name        = "my-group"
   description = "description"
   version     = "1.26"
